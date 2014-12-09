@@ -1,0 +1,64 @@
+Notebook[{
+Cell["Implicit ()", "Text",
+ CellChangeTimes->{{3.627123430719051*^9, 3.627123455350569*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "100"}], " ", "*", " ", 
+     RowBox[{"(", 
+      RowBox[{"y", " ", "-", " ", 
+       RowBox[{"Cos", "[", "t", "]"}]}], ")"}]}], " ", "-", " ", 
+    RowBox[{"Sin", "[", "t", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.627123190223884*^9, 3.6271232389935703`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"expr", " ", "=", " ", 
+   RowBox[{"f", " ", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"y", "\[Rule]", " ", 
+       SubscriptBox["y", "next"]}], ",", 
+      RowBox[{"t", "\[Rule]", 
+       SubscriptBox["t", "next"]}]}], "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.627123242426117*^9, 3.627123292936727*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   SubscriptBox["y", "next"], " ", "\[Equal]", " ", 
+   RowBox[{
+    SubscriptBox["y", "current"], "+", " ", 
+    RowBox[{"k", " ", "*", " ", "expr"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.627123298023539*^9, 3.627123338834635*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    SubscriptBox["y", "current"], "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "100"}], " ", "k", " ", 
+      RowBox[{"Cos", "[", 
+       SubscriptBox["t", "next"], "]"}]}], "+", 
+     RowBox[{"k", " ", 
+      RowBox[{"Sin", "[", 
+       SubscriptBox["t", "next"], "]"}]}], "+", 
+     SubscriptBox["y", "next"], "+", 
+     RowBox[{"100", " ", "k", " ", 
+      SubscriptBox["y", "next"]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.627123339830832*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 867},
+WindowMargins->{{Automatic, 256}, {640, Automatic}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+
