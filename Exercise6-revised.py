@@ -72,7 +72,6 @@ def maxDifference(res1,res2):
 def timestepDependent(res0):
     return lambda res1: maxDifference(res0, res1) < tol
 
-
 def run():
     results = EXECUTOR.map(lambda s:(s,list(evaluate(s))),stepSizes)
     for (stepSize,result) in results:
