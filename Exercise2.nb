@@ -1,6 +1,9 @@
 Notebook[{
-Cell["Implicit ()", "Text",
- CellChangeTimes->{{3.627123430719051*^9, 3.627123455350569*^9}}],
+Cell["\<\
+Finding the backwards (implicit) euler method for f.\
+\>", "Text",
+ CellChangeTimes->{{3.627123430719051*^9, 3.627123455350569*^9}, {
+  3.6271257943971167`*^9, 3.627125814511675*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -31,33 +34,39 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"Solve", "[", 
   RowBox[{
-   SubscriptBox["y", "next"], " ", "\[Equal]", " ", 
    RowBox[{
-    SubscriptBox["y", "current"], "+", " ", 
-    RowBox[{"k", " ", "*", " ", "expr"}]}]}], "]"}]], "Input",
- CellChangeTimes->{{3.627123298023539*^9, 3.627123338834635*^9}}],
+    SubscriptBox["y", "next"], " ", "\[Equal]", " ", 
+    RowBox[{
+     SubscriptBox["y", "current"], "+", " ", 
+     RowBox[{"k", " ", "*", " ", "expr"}]}]}], ",", 
+   SubscriptBox["y", "next"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.627123298023539*^9, 3.627123338834635*^9}, {
+  3.627124358796781*^9, 3.627124404985676*^9}, {3.627125154617136*^9, 
+  3.6271251591855*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"{", 
    RowBox[{
-    SubscriptBox["y", "current"], "\[Rule]", 
-    RowBox[{
+    SubscriptBox["y", "next"], "\[Rule]", 
+    FractionBox[
      RowBox[{
-      RowBox[{"-", "100"}], " ", "k", " ", 
-      RowBox[{"Cos", "[", 
-       SubscriptBox["t", "next"], "]"}]}], "+", 
-     RowBox[{"k", " ", 
-      RowBox[{"Sin", "[", 
-       SubscriptBox["t", "next"], "]"}]}], "+", 
-     SubscriptBox["y", "next"], "+", 
-     RowBox[{"100", " ", "k", " ", 
-      SubscriptBox["y", "next"]}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{3.627123339830832*^9}]
+      RowBox[{"100", " ", "k", " ", 
+       RowBox[{"Cos", "[", 
+        SubscriptBox["t", "next"], "]"}]}], "-", 
+      RowBox[{"k", " ", 
+       RowBox[{"Sin", "[", 
+        SubscriptBox["t", "next"], "]"}]}], "+", 
+      SubscriptBox["y", "current"]}], 
+     RowBox[{"1", "+", 
+      RowBox[{"100", " ", "k"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.627123339830832*^9, {3.627124362675426*^9, 3.6271244054994507`*^9}, 
+   3.627125159605082*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 867},
-WindowMargins->{{Automatic, 256}, {640, Automatic}},
+WindowMargins->{{Automatic, 244}, {150, Automatic}},
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
 ]
