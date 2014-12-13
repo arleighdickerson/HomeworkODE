@@ -20,7 +20,7 @@ r0 = np.array((x0, y0, z0))  # position vector
 t0 = 0
 tMax = 40
 
-stepSizes = list((10 ** -i for i in range(1, 9)))
+stepSizes = list((10 ** -i for i in range(1, 6)))
 EXECUTOR = ThreadPoolExecutor(cpu_count())
 
 compareStepSize = 0.1
@@ -81,4 +81,3 @@ def run():
                 if maxDifference(result, compareToResult) < tol:
                     print("result with step size " + str(stepSize) +
                           " is time step independent on result with step size " + str(compareToSize))
-    
